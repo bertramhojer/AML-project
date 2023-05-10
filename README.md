@@ -28,17 +28,16 @@ The MLP we train has a very simple architecture. We simply wanted to assess pote
 
 | Embedding | Parameters | Acc.     | F1       |
 |-----------|------------|----------|----------|
-| BOW       | 354,148    | xx +- yy | xx +- yy |
-| BOW       | 798,511    | xx +- yy | xx +- yy |
-| BERT      | 358,000    | xx +- yy | xx +- yy |
+| BOW       | 221,999    | 73.6 %   | 72,2 %   |
+| BERT      | 367,457    | 86.6 %   | 86.2 %   |
 
 ### ClusterGCN
 General GCNs have a bottleneck in terms of efficiency and scalability. ClusterGCN attempts to combat this problem by partitioning the graph into subgraphs and performing convolutions on these to reduce time and memory complexity. The output of each cluster is aggregated to obtain the final prediction. 
 
 | Embedding | Parameters | Acc.     | F1       |
 |-----------|------------|----------|----------|
-| BOW       | 354,148    | xx +- yy | xx +- yy |
-| BERT      | 354,148    | xx +- yy | xx +- yy |
+| BOW       | 358,128    | 87.5 %   | 86.5 %   |
+| BERT      | 358,128    | 90.1 %   | 90.6 %   |
 
 ## Documentation
 src
@@ -48,7 +47,7 @@ data
     * dataset.pkl: Dataset file with the Sbert updated graph object.
 
 ## Repo structure 
-``` bash 
+```bash 
 .
 ├── README.md
 ├── models
