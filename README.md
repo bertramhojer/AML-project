@@ -46,3 +46,22 @@ src
     * preprocessing.py: Provides the code for applying Sbert embeddings to the dataset and updating the graph object. We update all node-features of the graph as well as the edge links.
 data
     * dataset.pkl: Dataset file with the Sbert updated graph object.
+
+## Repo structure 
+``` bash 
+.
+├── README.md
+├── models
+│   ├── bow-model-checkpoint-100.pt
+│   ├── embedding-model-checkpoint-150.pt
+│   ├── gcn_model_embedding_2layer_epoch500.pt
+│   └── gcn_model_pca_2layer_epoch250.pt
+├── requirements.txt
+└── src
+    ├── create_dataset.py
+    ├── create_embeddings.py
+    ├── create_graph_dataset.py
+    ├── evaluation.ipynb
+    ├── ogbn.py
+    └── ogbn_pca.py
+```
