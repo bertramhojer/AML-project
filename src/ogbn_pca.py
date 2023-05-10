@@ -51,15 +51,16 @@ dataset = dataset[0]
 total_len = dataset.x.size(0)
 
 val_size, test_size = int(0.2 * total_len), int(0.2 * total_len)
+seed_everything(42)
 data = transforms.RandomNodeSplit(num_val=val_size, num_test=test_size)(dataset)
-
+seed_everything(420)
 subgraph_loader = NeighborSampler(data.edge_index, sizes=[-1],
                                     batch_size=1024, shuffle=False,
                                     num_workers=num_workers)
-
+seed_everything(69)
 cluster_data = ClusterData(data, num_parts=15000,
                             recursive=False)
-
+seed_everything(42069)
 loader = ClusterLoader(cluster_data, batch_size=batch_size,
                         shuffle=True, num_workers=num_workers)
 
