@@ -30,8 +30,8 @@ General GCNs have a bottleneck in terms of efficiency and scalability. ClusterGC
 | BERT      | 354,148    | xx +- yy | xx +- yy |
 
 ## Documentation
--- src
-    -- ogbn.py: An implementation of ClusterGCN. Can either be used with our own developed dataset with Sbert word embeddings or the original graph dataset from [https://ogb.stanford.edu/docs/nodeprop/#ogbn-products].
-    -- preprocessing.py: Provides the code for applying Sbert embeddings to the dataset and updating the graph object. We update all node-features of the graph as well as the edge links.
--- data
-    -- dataset.pkl: Dataset file with the Sbert updated graph object.
+src
+    * ogbn.py: An implementation of ClusterGCN. Can either be used with our own developed dataset with Sbert word embeddings or the original graph dataset from [https://ogb.stanford.edu/docs/nodeprop/#ogbn-products].
+    * preprocessing.py: Provides the code for applying Sbert embeddings to the dataset and updating the graph object. We update all node-features of the graph as well as the edge links.
+data
+    * dataset.pkl: Dataset file with the Sbert updated graph object.
