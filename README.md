@@ -5,6 +5,17 @@ Bjarke Christensen, Bertram Højer, Karl Kieler & Oliver Jarvis
 
 This project is a variation of the 'ogbn-products' classification task [https://ogb.stanford.edu/docs/nodeprop/#ogbn-products]. We attempt to solve a node-level classification task. The original dataset is a graph of amazon products purchased together where node-level features are PCA derived representations of a bag-of-words embedding of product descriptions. We have updated the graph such that node-level features are instead BERT-embeddings and compare a simple MLP model to a ClusterGCN model. 
 
+## Data
+In order to train the embeddings models, the dataset is needed. The dataset can downloaded from here.
+https://drive.google.com/file/d/1UckqCj6lwNViA3LVEwl6Y_i7KpPAfqpd/view?fbclid=IwAR2k90VTIVtT2NCUfovO0lNTZrsI1dG8kUOfEdgQaBIFT5WeWF9UVeKcPyw
+Once downloaded, add the .csv to the data folder.
+
+## Preprocessing
+Instead of downloading the data, you can also pre-process it yourself.
+This requires downloading the following files, unpacking them and adding them to the data folder.
+Amazon-3M: https://drive.google.com/file/d/1gsabsx8KR2N9jJz16jTcA0QASXsNuKnN/view?usp=sharing
+nodeidx2asin.csv: https://drive.google.com/file/d/1hxWJ3e_Jfk9HCdOqKSEk3HMFqpylkgak/view?usp=share_link
+
 ## Embeddings
 Word embeddings are created using the 'SentenceTransformers' library for all original product descriptions. We used the MiniLM model [https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2]. All matching nodes in the graph have then been updated with the new embedding features. When updating the graph we go from 2.45M to 2.35M nodes.
 
