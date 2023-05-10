@@ -36,7 +36,7 @@ The MLP models were trained in google colab notebooks:
 - Sbert implementation: https://colab.research.google.com/drive/1vu1sAFRL2sGWkHGQ0EWl1td0KNR6gdDd?usp=sharing
 
 
-The MLP we train has a very simple architecture. We simply wanted to assess potential differences in using the graph structure of the problem for classification or simply using the embeddings. 
+The MLP we train has a very simple architecture. We simply wanted to assess potential differences in using the graph structure of the problem for classification or simply using the embeddings. The difference in model size is due to differences in the embedding space of the BOW embeddings and the Sbert embeddings.
 
 | Embedding | Parameters | Acc.     | F1       |
 |-----------|------------|----------|----------|
@@ -44,7 +44,7 @@ The MLP we train has a very simple architecture. We simply wanted to assess pote
 | BERT      | 367,457    | 86.6 %   | 86.2 %   |
 
 ### ClusterGCN
-General GCNs have a bottleneck in terms of efficiency and scalability. ClusterGCN attempts to combat this problem by partitioning the graph into subgraphs and performing convolutions on these to reduce time and memory complexity. The output of each cluster is aggregated to obtain the final prediction. The file for training is ogbn.py and ogbn_pca.py
+General GCNs have a bottleneck in terms of efficiency and scalability. ClusterGCN attempts to combat this problem by partitioning the graph into subgraphs and performing convolutions on these to reduce time and memory complexity. The output of each cluster is aggregated to obtain the final prediction. The file for training is ogbn.py and ogbn_pca.py. The difference in model size is due to differences in the embedding space of the BOW embeddings and the Sbert embeddings.
 
 | Embedding | Parameters | Acc.     | F1       |
 |-----------|------------|----------|----------|
