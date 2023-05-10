@@ -48,8 +48,8 @@ General GCNs have a bottleneck in terms of efficiency and scalability. ClusterGC
 
 | Embedding | Parameters | Acc.     | F1       |
 |-----------|------------|----------|----------|
-| BOW       | 358,128    | 87.5 %   | 86.5 %   |
-| BERT      | 358,128    | 90.1 %   | 90.6 %   |
+| BOW       |  75,576    | 87.5 %   | 86.5 %   |
+| BERT      | 220,097    | 90.1 %   | 90.6 %   |
 
 ## Repo structure 
 ```bash 
