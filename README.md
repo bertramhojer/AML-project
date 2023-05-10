@@ -22,9 +22,12 @@ Word embeddings are created using the 'SentenceTransformers' library for all ori
 ## Models
 ### Multi-Layer Perceptron
 The MLP models were trained in google colab notebooks:
-Bag-of-words implementation: https://colab.research.google.com/drive/1CafDsj3n39SBXOpTZZtThuFbu5J8ZU4N?usp=sharing
-Sbert implementation: 
-The MLP we train has a very simple architecture. We simply wanted to assess potential differences in using the graph structure of the problem for classification or simply using the embeddings.
+
+- Bag-of-words implementation: https://colab.research.google.com/drive/1CafDsj3n39SBXOpTZZtThuFbu5J8ZU4N?usp=sharing
+
+- Sbert implementation: 
+
+The MLP we train has a very simple architecture. We simply wanted to assess potential differences in using the graph structure of the problem for classification or simply using the embeddings. 
 
 | Embedding | Parameters | Acc.     | F1       |
 |-----------|------------|----------|----------|
@@ -32,19 +35,12 @@ The MLP we train has a very simple architecture. We simply wanted to assess pote
 | BERT      | 367,457    | 86.6 %   | 86.2 %   |
 
 ### ClusterGCN
-General GCNs have a bottleneck in terms of efficiency and scalability. ClusterGCN attempts to combat this problem by partitioning the graph into subgraphs and performing convolutions on these to reduce time and memory complexity. The output of each cluster is aggregated to obtain the final prediction. 
+General GCNs have a bottleneck in terms of efficiency and scalability. ClusterGCN attempts to combat this problem by partitioning the graph into subgraphs and performing convolutions on these to reduce time and memory complexity. The output of each cluster is aggregated to obtain the final prediction. The file for training is ogbn.py and ogbn_pca.py
 
 | Embedding | Parameters | Acc.     | F1       |
 |-----------|------------|----------|----------|
 | BOW       | 358,128    | 87.5 %   | 86.5 %   |
 | BERT      | 358,128    | 90.1 %   | 90.6 %   |
-
-## Documentation
-src
-    * ogbn.py: An implementation of ClusterGCN. Can either be used with our own developed dataset with Sbert word embeddings or the original graph dataset from [https://ogb.stanford.edu/docs/nodeprop/#ogbn-products].
-    * preprocessing.py: Provides the code for applying Sbert embeddings to the dataset and updating the graph object. We update all node-features of the graph as well as the edge links.
-data
-    * dataset.pkl: Dataset file with the Sbert updated graph object.
 
 ## Repo structure 
 ```bash 
